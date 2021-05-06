@@ -1,0 +1,498 @@
+@import "functions";
+@import "mixin";
+@import "variables";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+
+}
+ header{
+  font-size:x-large;
+}
+main{
+  font-size:x-large;
+} 
+select{
+  font-size:x-large;
+}
+footer{
+ font-size:medium;
+}
+ .cmLogo{
+   margin-left: 13%;
+    font-size:$tamañoLetraPequeña;
+} 
+.MargenNavBar{
+    margin-left: 20px;
+}
+.EnlacesDePieDePagina{
+    margin-top: 20px;
+}
+footer{
+    background-color:$ColorEmpresa;
+}
+#logo{
+  height: 55px;
+}
+.lineaSeparadoraAzul{
+    margin-top: 0rem;
+    background-color: #2E76B8;
+    height: 40px;
+
+}
+.lineaSeparadoraAzul2{
+  margin-top: 0rem;
+  background-color: #2E76B8;
+  height: 10px;
+
+}
+
+.check-list {
+    @include check-list ;
+  }
+  .ColorCuadrosNM_GEO{
+    color: #B8DAFF;
+}
+.QuitarColorLink{
+    text-decoration:none;
+}
+  .hover{
+    @include hover(100%) ;
+  }
+
+  .Video{
+    @include video($VideoGrande) ;
+    & h1{
+      background-color: rgba(255, 255, 255, 0.8);
+    display: block;
+    position: absolute;
+    bottom: -2%;
+    padding: 5px;
+    width: 100%;
+    }
+  }
+  .Video1{
+    @include video($VideoGrande1) ;
+  }
+  .VideoContacto{
+    @include video($VideoPequeno) ;
+  }
+  .listado{
+    @include listado();
+  }
+
+  .VerTabla {
+    @include tabla();
+}
+.EliminarP{
+  @include tabla();
+  table tbody tr td:hover{
+    all: revert;
+  }
+}
+.EliminarS{
+  @include tabla();
+  table tbody tr td:hover{
+    all: revert;
+  }
+}
+
+.EliminarN{
+  @include tabla();
+  table tbody tr td:hover{
+    all: revert;
+  }
+}
+  .ModificarP{
+    @include tabla();
+    table tbody tr td:hover{
+      all: revert;
+    }
+  }
+  .ModificarS{
+    @include tabla();
+    table tbody tr td:hover{
+      all: revert;
+    }
+  }
+  .ModificarN{
+    @include tabla();
+    table tbody tr td:hover{
+      all: revert;
+    }
+  }
+ .icon{
+   width: 30%;
+ }
+ .counters strong {
+   display: block; 
+   font-weight: 900; 
+   font-size: 2em; 
+   line-height: 1; 
+   margin-bottom: 0.3rem;
+}
+#hrPalabra{
+  width:40% ;
+  margin-left: 30%;
+  height: 20px;
+}
+#cont2{
+  position: relative;
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('/Blanchadell/imagenes/barco/cabina.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: scroll;
+    text-align: center;
+    height: 400px;
+}
+.tmMImg{
+  width: auto;
+  height: 700px;
+}
+.imgCertificado{
+height: 100px;
+width: auto;
+}
+.fondoAzul{
+background-color: rgb(219, 219, 219);
+}
+.lineaNegra{
+  height: 2px;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+}
+
+#as1{
+  @include OpacarImagen('/Blanchadell/imagenes/astillero/durabilidad.jpg',350px);
+}
+#as2{
+  @include OpacarImagen('/Blanchadell/imagenes/astillero/peso.jpg',350px);
+}
+#as3{
+  @include OpacarImagen('/Blanchadell/imagenes/astillero/manejabilidad.jpg',350px);
+}
+#as4{
+  @include OpacarImagen('/Blanchadell/imagenes/astillero/confort.jpg',350px);
+}
+#as5{
+  @include OpacarImagen('/Blanchadell/imagenes/astillero/mantenimiento.jpg',350px);
+}
+#as6{
+  @include OpacarImagen('/Blanchadell/imagenes/astillero/reparaciones.jpg',350px);
+}
+#as7{
+  @include OpacarImagen('/Blanchadell/imagenes/astillero/estetica.jpg',350px);
+}
+#as8{
+  @include OpacarImagen('/Blanchadell/imagenes/astillero/seguridad.jpg',350px);
+}
+#as9{
+  @include OpacarImagen('/Blanchadell/imagenes/astillero/residuos.jpg',350px);
+}
+#as10{
+  @include OpacarImagen('/Blanchadell/imagenes/astillero/coste.jpg',350px);
+}
+#Pesca{
+  @include MostrarImgConDesplazamiento('/Blanchadell/imagenes/astillero/tipo/pesca.jpg');
+}
+#Pasage{
+  @include MostrarImgConDesplazamiento('/Blanchadell/imagenes/astillero/tipo/Pasage.jpg');
+
+}
+#Aguicultura{
+  @include MostrarImgConDesplazamiento('/Blanchadell/imagenes/astillero/tipo/aquicultura.jpg');
+
+}
+#Recreo{
+  @include MostrarImgConDesplazamiento('/Blanchadell/imagenes/astillero/tipo/recreo.jpg');
+
+}
+#Vigilancia{
+  @include MostrarImgConDesplazamiento('/Blanchadell/imagenes/astillero/tipo/vigilancia.jpg');
+}
+
+#ServiciosMaritimos{
+  @include MostrarImgConDesplazamiento('/Blanchadell/imagenes/astillero/tipo/salvamento.jpg');
+  
+}
+
+#fabricacion{
+  @include  MostrarImgConDesplazamiento2('/Blanchadell/imagenes/mecanica/fabricacion.jpg');
+ 
+}
+.listaGiratoria{
+  @include listaGiratoria();
+}
+.colorDeEmpresa{
+  color: $ColorEmpresa;
+}
+.hover2{
+  @include hover(85%,) ;
+}
+.ImgMBarco{
+  & img {
+    display: block;
+    position: relative;		
+    width:100%;
+  }
+ & h1{
+  background-color: rgba(255,255,255,.8);
+  display: block;
+  position: absolute;
+  bottom:-2%;
+  padding: 5px;
+  width: 100%;
+
+}
+}
+.spectbl {
+  margin: 0;
+  width: 100%;
+  font-family: Tahoma,Arial,Helvetica,sans-serif;
+& th {
+  padding: 5px 32px 5px 1.2%; 
+  border-right: 1px solid #e4e4e4; 
+  border-bottom: 1px solid #e4e4e4; 
+  font-size: 1.3rem; 
+  line-height: 2.4rem; 
+  color: #555; 
+  width: 50%; 
+  vertical-align: top;
+  font-weight: 400;
+  text-align: left;
+}
+&  td {
+  border-right: 0;
+  color: $ColorEmpresa;
+  padding-left: 3.4%;
+  
+  padding: 5px 32px 5px 1.2%;
+  border-right: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  font-size: 1.3rem;
+  line-height: 2.4rem;
+  
+  width: 50%;
+  vertical-align: top;
+  font-weight: 400;
+  text-align: left;
+}
+}
+
+.imgTM{
+width: 100%;
+height: 5%;
+}
+#img1{
+  @include imagenSinMovimiento('/Blanchadell/imagenes/mecanica/maquinilla.jpg');
+  background-color: beige;
+}
+#img2{
+  @include imagenSinMovimiento('/Blanchadell/imagenes/mecanica/helice.jpg');
+  background-color: beige;
+}
+#img3{
+  @include imagenSinMovimiento('/Blanchadell/imagenes/mecanica/hidraulico.jpg');
+  background-color: beige;
+}
+#img4{
+  @include imagenSinMovimiento('/Blanchadell/imagenes/mecanica/propulsor.jpg');
+  background-color: beige;
+}
+#img5{
+  @include imagenSinMovimiento('/Blanchadell/imagenes/mecanica/motor.jpg');
+  background-color: beige;
+}
+#img6{
+  @include imagenSinMovimiento('/Blanchadell/imagenes/mecanica/helice2.jpg');
+  background-color: beige;
+}
+
+#mantenimiento{
+  @include MostrarImgConDesplazamiento2('/Blanchadell/imagenes/mecanica/mantenimiento.jpg');
+}
+#reformas{
+  @include MostrarImgConDesplazamiento2('/Blanchadell/imagenes/mecanica/propulsor.jpg');
+}
+.imgMecanica{
+  width: 500px; 
+}
+.LineaFichaTecnica{
+  background-color: $ColorEmpresa;
+}
+.ImagenesP{
+  & figure:hover{
+    & img{
+      transform:scale(1.08);
+      -ms-transform:scale(1.08);
+    }
+  }
+}
+.listado2{
+  @include listado2();
+}
+#cronologico{
+ 
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('/Blanchadell/imagenes/historia/cronologia.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    height:450px;
+    width:auto;
+  
+    & h1{
+        padding-top: 10%;
+      }
+}
+.timeline {
+  margin-bottom: 165px;
+
+  & .content {
+    display: -moz-flex;
+   display: -ms-flexbox;
+   display: flex;
+   & .content-img {
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    -moz-align-items: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    -moz-justify-content: center;
+    justify-content: center;
+    width: 100%;
+    margin: 50px 0;
+
+    & img {
+      max-width: 100%;
+    }
+   }
+   & .diagram {
+    margin: 0 60px;
+    min-height: 345px;
+    width: 93px;
+    min-width: 93px;
+    text-align: center;
+    font-size: 0;
+    & .circle {
+      border-radius: 100px;
+      width: 90px;
+      height: 90px;
+      border: 10px solid $ColorEmpresa;
+      background: #fff;
+      position: absolute;
+      z-index: 1;
+    }
+    & .line {
+      border-left: 8px solid $ColorEmpresa;
+      height: 100%;
+      position: absolute;
+      width: 0;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+    }
+  }
+  & .content-text {
+    width: 100%;
+    font-size: 1em;
+    margin-bottom: 110px;
+    & .arrow {
+      width: 0;
+      height: 0;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      margin-top: 27px;
+      opacity: .9;
+      & .arrow-left {
+        border-right: 25px solid #fff;
+      }
+    }
+    & .description {
+      background-color: #fff;
+      opacity: .9;
+     }
+  }
+  & .description {
+    color: #666;
+    & .date {
+      text-align: left;
+      padding: 0 20px;
+      font-size:10vh;
+      color: $ColorEmpresa;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .text {
+      display: block;
+      padding: 0 20px 20px;
+    }
+  }
+}
+}
+.mgb-50 {
+  margin-bottom: 50px;
+}
+#lgfot{
+  width:120px;  height:auto;
+ }
+ #tHis{
+  font-size: 100px;
+ }
+@media (max-width:820px){
+  .tmMImg{
+   width: auto;
+   height:600px;
+   }
+   #lgfot{
+    width:40%;  
+    height:auto;
+   }
+ }
+@media (max-width:720px){
+  .tmMImg{
+   width: auto;
+   height:500px;
+   }
+   #lgfot{
+    width:60%;  
+    height:auto;
+   }
+ }
+@media (max-width:520px){
+  #cont2{
+   height: auto;
+  }
+  .tmMImg{
+   width: auto;
+   height:400px;
+   }
+   #lgfot{
+    width:15%;  
+    height:auto;
+   }
+ }
+ @media (max-width:110px){
+  #lgfot{
+    width:15%;  
+    height:auto;
+   }
+ }
+ 
